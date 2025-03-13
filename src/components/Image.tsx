@@ -72,14 +72,7 @@ export const Default = (props: ImageProps): JSX.Element => {
   const { sitecoreContext } = useSitecoreContext();
 
   if (props.fields) {
-    const Image = () => (
-      <img
-        src={props.fields.Image.value?.src}
-        width={Number(props.fields.Image.value?.width)}
-        height={Number(props.fields.Image.value?.height)}
-        style={{ marginTop: '20px', marginLeft: '40px' }}
-      />
-    );
+    const Image = () => <JssImage field={props.fields.Image} />;
     const id = props.params.RenderingIdentifier;
 
     return (
